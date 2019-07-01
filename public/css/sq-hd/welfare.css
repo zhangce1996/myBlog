@@ -1,0 +1,12 @@
+
+/* ÓÅ»ÝÈ¯¹ÙÍøÑùÊ½ */
+:focus{outline:0}.clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both}.clearfix{*zoom:1}.error-tip{background-color:#FEE5E5;border:solid 1px #CB0000;color:#CB0000;text-align:center;padding:6px 0;margin:10px 0}.coupon{text-align:center;float:left;margin-right:15px;position:relative;height:240px;width:304px;background-color:#f2f2f2}.coupon:nth-of-type(3n){margin-right:0}.coupon-block-level{display:block;width:818px;height:160px}.coupon.coupon-block-level>div>h1{padding-bottom:10px;color:#868686}.coupon.coupon-block-level>div>p{height:30px;padding-bottom:10px;color:#868686}.coupon-new:before{background-image:url(//img.alicdn.com/tps/i3/T1Xnh1Fp0cXXbtdIPg-44-34.png);background-size:43px 34px;width:43px;height:34px;position:absolute;top:0;right:0;content:''}.coupon>div:first-child{width:100%;height:129px;color:#fff}.coupon>div>h1{font-size:18px;padding-bottom:30px;padding-top:20px}.coupon>div>p{font-size:12px;text-align:center;padding:0 20px}.cnt{font-size:14px;text-decoration:none;padding:20px 0;display:block;cursor:pointer}.btn{display:inline-block;*zoom:1;*display:inline;width:98px;height:30px;line-height:20px;background-color:#3097dd;color:#fff;border:none;font-size:14px;text-decoration:none;cursor:pointer}.btn:hover{background-color:#37a7ec;text-decoration:none}.btn.disabled{background:0 0;border:solid 1px #cecece;color:#cecece;cursor:not-allowed}.tip{margin-top:12px;color:#858585;display:block}.coupon-color-0{background-color:#68e8db}.coupon-color-1{background-color:#68d5e8}.coupon-color-2{background-color:#fd7d31}.coupon-color-3{background-color:#fbc433}.coupon-color-4{background-color:#aee016}
+
+
+.on{
+	background-color:#fd7d31
+}
+
+.out{
+	background-color:#fbc433;
+}

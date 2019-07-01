@@ -1,0 +1,686 @@
+/**
+ * admin.css
+ */
+
+
+/*
+ fixed-layout 固定头部和边栏布局
+*/
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+ul {
+  margin-top: 0;
+}
+
+.admin-icon-yellow {
+  color: #ffbe40;
+}
+
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1500;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.admin-header-list a:hover :after {
+  content: none;
+}
+
+.admin-main {
+  position: relative;
+  height: 100%;
+  padding-top: 51px;
+  background: #f3f3f3;
+}
+
+.admin-menu {
+  position: fixed;
+  z-index: 10;
+  bottom: 30px;
+  right: 20px;
+}
+
+.admin-sidebar {
+  width: 260px;
+  min-height: 100%;
+  float: left;
+  border-right: 1px solid #cecece;
+}
+
+.admin-sidebar.am-active {
+  z-index: 1600;
+}
+
+.admin-sidebar-list {
+  margin-bottom: 0;
+}
+
+.admin-sidebar-list li a {
+  color: #5c5c5c;
+  padding-left: 24px;
+}
+
+.admin-sidebar-list li:first-child {
+  border-top: none;
+}
+
+.admin-sidebar-sub {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 16px 8px -15px #e2e2e2 inset;
+  background: #ececec;
+  padding-left: 24px;
+}
+
+.admin-sidebar-sub li:first-child {
+  border-top: 1px solid #dedede;
+}
+
+.admin-sidebar-panel {
+  margin: 10px;
+}
+
+.admin-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+}
+
+.admin-content,
+.admin-sidebar {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-content-body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.admin-content-footer {
+  font-size: 85%;
+  color: #777;
+}
+
+.admin-content-list {
+  border: 1px solid #e9ecf1;
+  margin-top: 0;
+}
+
+.admin-content-list li {
+  border: 1px solid #e9ecf1;
+  border-width: 0 1px;
+  margin-left: -1px;
+}
+
+.admin-content-list li:first-child {
+  border-left: none;
+}
+
+.admin-content-list li:last-child {
+  border-right: none;
+}
+
+.admin-content-table a {
+  color: #535353;
+}
+.admin-content-file {
+  margin-bottom: 0;
+  color: #666;
+}
+
+.admin-content-file p {
+  margin: 0 0 5px 0;
+  font-size: 1.4rem;
+}
+
+.admin-content-file li {
+  padding: 10px 0;
+}
+
+.admin-content-file li:first-child {
+  border-top: none;
+}
+
+.admin-content-file li:last-child {
+  border-bottom: none;
+}
+
+.admin-content-file li .am-progress {
+  margin-bottom: 4px;
+}
+
+.admin-content-file li .am-progress-bar {
+  line-height: 14px;
+}
+
+.admin-content-task {
+  margin-bottom: 0;
+}
+
+.admin-content-task li {
+  padding: 5px 0;
+  border-color: #eee;
+}
+
+.admin-content-task li:first-child {
+  border-top: none;
+}
+
+.admin-content-task li:last-child {
+  border-bottom: none;
+}
+
+.admin-task-meta {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.admin-task-bd {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.admin-content-comment {
+  margin-bottom: 0;
+}
+
+.admin-content-comment .am-comment-bd {
+  font-size: 1.4rem;
+}
+
+.admin-content-pagination {
+  margin-bottom: 0;
+}
+.admin-content-pagination li a {
+  padding: 4px 8px;
+}
+
+@media only screen and (min-width: 641px) {
+  .admin-sidebar {
+    display: block;
+    position: static;
+    background: none;
+  }
+
+  .admin-offcanvas-bar {
+    position: static;
+    width: auto;
+    background: none;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    overflow-y: visible;
+    min-height: 100%;
+  }
+  .admin-offcanvas-bar:after {
+    content: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .admin-sidebar {
+    width: inherit;
+  }
+
+  .admin-offcanvas-bar {
+    background: #f3f3f3;
+  }
+
+  .admin-offcanvas-bar:after {
+    background: #BABABA;
+  }
+
+  .admin-sidebar-list a:hover, .admin-sidebar-list a:active{
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    background: #E4E4E4;
+  }
+
+  .admin-content-list li {
+    padding: 10px;
+    border-width: 1px 0;
+    margin-top: -1px;
+  }
+
+  .admin-content-list li:first-child {
+    border-top: none;
+  }
+
+  .admin-content-list li:last-child {
+    border-bottom: none;
+  }
+
+  .admin-form-text {
+    text-align: left !important;
+  }
+
+}
+
+/*
+* user.html css
+*/
+.user-info {
+  margin-bottom: 15px;
+}
+
+.user-info .am-progress {
+  margin-bottom: 4px;
+}
+
+.user-info p {
+  margin: 5px;
+}
+
+.user-info-order {
+  font-size: 1.4rem;
+}
+
+/*
+* errorLog.html css
+*/
+
+.error-log .am-pre-scrollable {
+  max-height: 40rem;
+}
+
+/*
+* table.html css
+*/
+
+.table-main {
+  font-size: 1.4rem;
+  padding: .5rem;
+}
+
+.table-main button {
+  background: #fff;
+}
+
+.table-check {
+  width: 30px;
+}
+
+.table-id {
+  width: 50px;
+}
+
+@media only screen and (max-width: 640px) {
+  .table-select {
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+}
+
+/*
+gallery.html css
+*/
+
+.gallery-list li {
+  padding: 10px;
+}
+
+.gallery-list a {
+  color: #666;
+}
+
+.gallery-list a:hover {
+  color: #3bb4f2;
+}
+
+.gallery-title {
+  margin-top: 6px;
+  font-size: 1.4rem;
+}
+
+.gallery-desc {
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+/*
+ 404.html css
+*/
+
+.page-404 {
+  background: #fff;
+  border: none;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.sui-breadcrumb {
+    border-radius: 3px;
+    font-weight: normal;
+    list-style: outside none none;
+    margin: 0 0 18px;
+    padding: 9px 15px;
+}
+.sui-breadcrumb > li {
+    display: inline-block;
+}
+.sui-breadcrumb > li + li::before {
+    color: #ccc;
+    content: ">";
+    padding: 0 5px;
+}
+.sui-breadcrumb > .active {
+    color: #999;
+}
+.sui-breadcrumb.breadcrumb-dark {
+    background: #f5f5f5 none repeat scroll 0 0;
+}
+.sui-pagination {
+    margin: 18px 0;
+}
+.sui-pagination ul {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    vertical-align: middle;
+}
+.sui-pagination ul > li {
+    display: inline;
+}
+.sui-pagination ul > li > a, .sui-pagination ul > li > span {
+    background-color: #fff;
+    border: 1px solid #e0e9ee;
+    color: #28a3ef;
+    float: left;
+    line-height: 18px;
+    margin-left: -1px;
+    padding: 2px 7px;
+    position: relative;
+    text-decoration: none;
+}
+.sui-pagination ul > li > a > i.sui-icon, .sui-pagination ul > li > span > i.sui-icon {
+    line-height: 18px;
+}
+.sui-pagination ul > li > a:hover, .sui-pagination ul > li > a:focus {
+    background-color: #4cb9fc;
+    border-color: #4cb9fc;
+    color: #fff;
+}
+.sui-pagination ul > .active > a, .sui-pagination ul > .active > span {
+    background-color: #28a3ef;
+    border-color: #28a3ef;
+    color: #fff;
+    cursor: default;
+}
+.sui-pagination ul > .active > a:hover, .sui-pagination ul > .active > span:hover, .sui-pagination ul > .active > a:focus, .sui-pagination ul > .active > span:focus {
+    background-color: #28a3ef;
+    border-color: #28a3ef;
+    color: #fff;
+}
+.sui-pagination ul > .dotted > span, .sui-pagination ul > .dotted > a {
+    border-bottom: medium none;
+    border-top: medium none;
+}
+.sui-pagination ul > .disabled > span, .sui-pagination ul > .disabled > a, .sui-pagination ul > .disabled > a:hover, .sui-pagination ul > .disabled > a:focus {
+    background-color: transparent;
+    color: #999;
+    cursor: default;
+}
+.sui-pagination ul > .prev > span, .sui-pagination ul > .next > span, .sui-pagination ul > .prev > a, .sui-pagination ul > .next > a {
+    background-color: #fafafa;
+}
+.sui-pagination ul > .disabled.prev > span:hover, .sui-pagination ul .disabled.next > span:hover, .sui-pagination ul > .disabled.prev > span:focus, .sui-pagination ul .disabled.next > span:focus, .sui-pagination ul > .disabled.prev > a:hover, .sui-pagination ul .disabled.next > a:hover, .sui-pagination ul > .disabled.prev > a:focus, .sui-pagination ul .disabled.next > a:focus {
+    background-color: #fafafa;
+    border-color: #e0e9ee;
+}
+.sui-pagination .prev + .prev a, .sui-pagination .next + .next a {
+    margin-left: 5px;
+}
+.sui-pagination .ex-page-num {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 5px;
+    padding: 2px 4px;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    vertical-align: middle;
+    width: 18px;
+}
+.sui-pagination .ex-page-num:focus {
+    border-color: #28a3ef;
+    outline: 0 none;
+}
+.sui-pagination div {
+    color: #333;
+    display: inline-block;
+}
+.sui-pagination div .page-num {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: inline-block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0;
+    padding: 2px 4px;
+    transition: width 0.1s linear 0.1s;
+    vertical-align: middle;
+    width: 15px;
+}
+.sui-pagination div .page-num:focus {
+    border-color: #28a3ef;
+    outline: 0 none;
+}
+.sui-pagination div .page-num + .page-confirm {
+    -moz-user-select: none;
+    background-color: #28a3ef;
+    border: 1px solid #1299ec;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding: 2px 14px;
+    text-align: center;
+    vertical-align: top;
+}
+.sui-pagination div .page-num + .page-confirm:hover, .sui-pagination div .page-num + .page-confirm:focus {
+    background-color: #f7f7f7;
+    border: 1px solid #eaeaea;
+    color: #333;
+}
+.sui-pagination div .page-num + .page-confirm.disabled, .sui-pagination div .page-num + .page-confirm[disabled], .sui-pagination div .page-num + .page-confirm.disabled:hover, .sui-pagination div .page-num + .page-confirm[disabled]:hover, .sui-pagination div .page-num + .page-confirm.disabled:focus, .sui-pagination div .page-num + .page-confirm[disabled]:focus, .sui-pagination div .page-num + .page-confirm.disabled:active, .sui-pagination div .page-num + .page-confirm[disabled]:active, .sui-pagination div .page-num + .page-confirm.disabled.active, .sui-pagination div .page-num + .page-confirm.active[disabled] {
+    background-color: #f3f3f3;
+    border-color: #e6e6e6;
+    color: #c6c6c6;
+}
+.sui-pagination div .page-num + .page-confirm:active, .sui-pagination div .page-num + .page-confirm.active {
+    background-color: #dedede;
+    border: 1px solid #d1d1d1;
+}
+.sui-pagination div .page-num + .page-confirm:hover, .sui-pagination div .page-num + .page-confirm:focus {
+    color: #333;
+    text-decoration: none;
+}
+.sui-pagination div .page-num + .page-confirm:focus {
+    outline: medium none;
+    outline-offset: -2px;
+}
+.sui-pagination div .page-num + .page-confirm.active, .sui-pagination div .page-num + .page-confirm:active {
+    background-image: none;
+}
+.sui-pagination div .page-num + .page-confirm.disabled, .sui-pagination div .page-num + .page-confirm[disabled] {
+    -moz-user-select: none;
+    background-image: none;
+    box-shadow: none;
+    cursor: default;
+}
+.sui-pagination div .page-num + .page-confirm .sui-icon {
+    line-height: 1;
+}
+.sui-pagination div .page-num + .page-confirm .sui-icon::after {
+    content: " ";
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered {
+    background-color: transparent;
+    border: 1px solid #8c8c8c;
+    color: #8c8c8c;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered:focus {
+    background-color: #666;
+    border: 1px solid #666;
+    color: white;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered:active, .sui-pagination div .page-num + .page-confirm.btn-bordered.active {
+    background-color: #4d4d4d;
+    border: 1px solid #4d4d4d;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-primary {
+    border: 1px solid #1299ec;
+    color: #1299ec;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-primary:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-primary:focus {
+    background-color: #4cb9fc;
+    border: 1px solid #4cb9fc;
+    color: white;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-primary:active, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-primary.active {
+    background-color: #1aa5fb;
+    border: 1px solid #1aa5fb;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-warning {
+    border: 1px solid #e1b203;
+    color: #e1b203;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-warning:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-warning:focus {
+    background-color: #fbd238;
+    border: 1px solid #fbd238;
+    color: white;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-warning:active, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-warning.active {
+    background-color: #fac706;
+    border: 1px solid #fac706;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-danger {
+    border: 1px solid #e8351f;
+    color: #e8351f;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-danger:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-danger:focus {
+    background-color: #ed6a5a;
+    border: 1px solid #ed6a5a;
+    color: white;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-danger:active, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-danger.active {
+    background-color: #e8402c;
+    border: 1px solid #e8402c;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-success {
+    border: 1px solid #34c360;
+    color: #34c360;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-success:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-success:focus {
+    background-color: #49de79;
+    border: 1px solid #49de79;
+    color: white;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-success:active, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-success.active {
+    background-color: #25cf5c;
+    border: 1px solid #25cf5c;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-info {
+    border: 1px solid #46b8da;
+    color: #46b8da;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-info:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-info:focus {
+    background-color: #85d0e7;
+    border: 1px solid #85d0e7;
+    color: white;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-info:active, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-info.active {
+    background-color: #5bc0de;
+    border: 1px solid #5bc0de;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-inverse {
+    border: 1px solid #373737;
+    color: #373737;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-inverse:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-inverse:focus {
+    background-color: #222;
+    border: 1px solid #222;
+    color: white;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.btn-inverse:active, .sui-pagination div .page-num + .page-confirm.btn-bordered.btn-inverse.active {
+    background-color: #080808;
+    border: 1px solid #080808;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.btn-bordered.disabled, .sui-pagination div .page-num + .page-confirm.btn-bordered[disabled], .sui-pagination div .page-num + .page-confirm.btn-bordered.disabled:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered[disabled]:hover, .sui-pagination div .page-num + .page-confirm.btn-bordered.disabled:focus, .sui-pagination div .page-num + .page-confirm.btn-bordered[disabled]:focus {
+    background: #f3f3f3 none repeat scroll 0 0;
+    border-color: #c6c6c6;
+    color: #c6c6c6;
+}
+.sui-pagination div .page-num + .page-confirm .sui-label {
+    position: relative;
+    top: -1px;
+}
+.sui-pagination div .page-num + .page-confirm:hover, .sui-pagination div .page-num + .page-confirm:focus {
+    background-color: #4cb9fc;
+    border: 1px solid #33affc;
+    color: #fff;
+}
+.sui-pagination div .page-num + .page-confirm.disabled, .sui-pagination div .page-num + .page-confirm[disabled], .sui-pagination div .page-num + .page-confirm.disabled:hover, .sui-pagination div .page-num + .page-confirm[disabled]:hover, .sui-pagination div .page-num + .page-confirm.disabled:focus, .sui-pagination div .page-num + .page-confirm[disabled]:focus, .sui-pagination div .page-num + .page-confirm.disabled:active, .sui-pagination div .page-num + .page-confirm[disabled]:active, .sui-pagination div .page-num + .page-confirm.disabled.active, .sui-pagination div .page-num + .page-confirm.active[disabled] {
+    background-color: #f3f3f3;
+    border-color: #e6e6e6;
+    color: #c6c6c6;
+}
+.sui-pagination div .page-num + .page-confirm:active, .sui-pagination div .page-num + .page-confirm.active {
+    background-color: #1aa5fb;
+    border: 1px solid #049bf7;
+}
+.sui-pagination div .page-num + .page-confirm .caret {
+    border-bottom-color: #fff;
+    border-top-color: #fff;
+}
+.sui-pagination div .page-num:focus {
+    width: 50px;
+}
+.sui-pagination div .page-num:focus + .page-confirm {
+    display: inline-block;
+}

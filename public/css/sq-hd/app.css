@@ -1,0 +1,83 @@
+	.smsContent {
+	    overflow: hidden;
+	    border: 1px solid #d9dadc;
+	    border-radius: 7px;
+	    background: #FFF;
+	    min-height: 600px;
+	    overflow-x: auto;
+	    margin-top:20px;
+	}
+	.titleStyled{
+		margin-left:20px;
+	}
+	.topBorder {
+	    border-top: 1px solid #EAEDF2;
+	    margin-top:5px;
+	}
+	.checkMargin{
+		margin-left:160px;
+		margin-top:14px;
+		font-size:14px;
+	}
+	.divMargin{
+		margin-left:60px;
+		margin-top:20px;
+		font-size:14px;
+	}
+	.buttonMargin{
+		margin-left:160px;
+		margin-top:14px;
+		font-size:14px;
+	}
+	.fontStyled{
+		font-size:16px;
+	}
+	.customTr{
+		background: #E0E0E0;
+	}
+	.numberInput{
+		width:100px;
+		margin-left:3px;
+		margin-right:3px;
+	}
+	.numSpan{
+		font-size:14px;
+		color:green;
+	}
+	.msgBox{
+		font-size:14px;
+		line-height: 25px;
+    	color: #3a9ed5;
+    	
+	}
+	
+	
+	
+	/*send*/
+	
+	/* .gaxz {
+	    background: url( ${ctx}/static/image/ggblue.png) no-repeat right bottom;
+	    border: 2px solid #656BD8;
+	    color: #4cb9fc;
+	} */
+	.divForm{
+		padding-left:50px;
+		margin-bottom:8px;
+	}
+	.divButton{
+		padding-left:120px;
+		margin-top:20px;
+		margin-bottom:8px;
+	}
+	.dowapdesc-iphone-preview {
+		overflow-y: scroll;
+		margin-top:-345px;
+		left:13px;
+        width: 175px;
+        height: 300px;
+        text-align:left;
+        background-color:#f0f0f0;
+        position:relative;
+	}
+	
+	
