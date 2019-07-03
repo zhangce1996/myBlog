@@ -41,3 +41,19 @@ Route::get('addact', function () {
 
 //添加活动
 Route::post('editact',['as'=>'editact','uses'=>'LoginController@editact']);
+
+
+
+//中间件测试
+
+Route::get('activity0',['uses'=>'ActiveController@activity0']);//宣传
+
+
+Route::group(['middleware'=>['activity']],function (){
+
+    Route::get('activity1',['uses'=>'ActiveController@activity1']);
+    Route::get('activity2',['uses'=>'ActiveController@activity2']);
+});
+
+
+
